@@ -1,6 +1,6 @@
 import { KEY_LOCALSTORAGE_FASTIVAL_FLG } from "../configs/keys.js";
-import { KEY_LOCALSTORAGE_FESTIVAL_PAGE } from "../configs/keys.JS";
-import { KEY_LOCALSTORAGE_FESTIVAL_LIST } from "../configs/keys.JS";
+import { KEY_LOCALSTORAGE_FESTIVAL_PAGE } from "../configs/keys.js";
+import { KEY_LOCALSTORAGE_FESTIVAL_LIST } from "../configs/keys.js";
 
 export const localStorageUtil = {
   // 책임 중심적 설계시 코드 작성 방법
