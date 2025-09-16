@@ -13,7 +13,7 @@ export const dateFomatter = {
    * @returns {string} `YYYYMMDD` 포맷 
    */
   formatDateToYMD: (date) => {
-    return `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${(date.getDate() + 1).toString().padStart(2, '0')}`;
+    return `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${(date.getDate()).toString().padStart(2, '0')}`;
   },
 }
 // TODO: 테스트 코드 삭제  필요 
