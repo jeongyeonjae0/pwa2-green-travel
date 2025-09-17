@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
 import Main from "../components/Main.jsx";
 import FestivalList from "../components/festivals/FestivalList.jsx";
+import FestivalShow from "../components/festivals/FestivalShow.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: '/festivals',
         element: <FestivalList />
+      },
+      {
+        path: '/festivals/:id',
+        element: <FestivalShow />
       }
     ]
   }
