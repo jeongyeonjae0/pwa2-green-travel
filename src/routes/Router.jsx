@@ -3,6 +3,7 @@ import App from "../App";
 import Main from "../components/Main.jsx";
 import FestivalList from "../components/festivals/FestivalList.jsx";
 import FestivalShow from "../components/festivals/FestivalShow.jsx";
+import StayList from "../components/Staies/StayList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/festivals/:id',
         element: <FestivalShow />
+      },
+      {
+        path: '/staies',
+        element: <StayList /> 
       }
     ]
   }
