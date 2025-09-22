@@ -19,7 +19,7 @@ const staySlice = createSlice({
       .addCase(stayIndex.fulfilled, (state, action) => {
         if(action.payload.items?.item) {
           state.list = [...state.list, ...action.payload.items.item];
-          state.page = action.payload.page;
+          state.page = action.payload.pageNO;
           localStorageUtil.setStayList(state.list);
           localStorageUtil.setStayPage(state.page);
           localStorageUtil.setStayScrollFlg(state.scrollEventFlg);
@@ -37,7 +37,7 @@ const staySlice = createSlice({
 });
 
 export const {
-  setstayScrollEventFlg
+  setScrollEventFlg
 } = staySlice.actions; 
 
 export default staySlice.reducer;

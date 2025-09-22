@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './StayList.css'; 
 import { useEffect } from 'react';
 import { stayIndex } from '../../store/thunks/stayThunk.js';
-import { setstayScrollEventFlg } from '../../store/slices/staySlice.js';
+import { setScrollEventFlg } from '../../store/slices/staySlice.js';
 
 function StayList () {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ function StayList () {
     const viewHeight = docHeight - winHeight; 
 
      if(viewHeight === nowHeight && stayScrollEventFlg) {
-      dispatch(setstayScrollEventFlg(false)); 
+      dispatch(setScrollEventFlg(false)); 
       dispatch(stayIndex());
     }
   }
