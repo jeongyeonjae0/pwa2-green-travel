@@ -1,0 +1,32 @@
+.stay-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.stay-card {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.stay-card-img {
+  padding-top: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stay-card-title {
+  font-size: 32px;
+}
+
+.stay-card-addr {
+  font-size: 20px;
+}

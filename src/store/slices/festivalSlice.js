@@ -46,7 +46,7 @@ const festivalSlice = createSlice({
         }
       })
       .addMatcher(
-          action => action.type.endsWith('/rejected'),
+          action => (action.type.startsWith('festivalSlice/') &&action.type.endsWith('/rejected')),
           (state, action) => {
           console.error('에러발생.', action.error);
         }
