@@ -57,8 +57,13 @@ function FestivalList() {
     navigate(`/festivals/${item.contentid}`);
   }
 
+  function redirectBack() {
+    navigate(-1);
+  }
+
   return (
     <>
+      <button type="button" onClick={redirectBack}>되돌아가기</button>
       <div className="container">
         {
           // festivalList && festivalList.map(item => {

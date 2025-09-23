@@ -1,4 +1,4 @@
-.show-container {
+.stay-show-container {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -7,16 +7,16 @@
   color: #fff;
 }
 
-.show-title {
+.stay-show-title {
   font-size: 40px;
   font-weight: 900;
   color: #DFF2EB;
 }
 
-.show-period {
+.stay-show-addr {
   font-size: 25px;
 }
 
-.show-img {
+.stay-show-img {
   width: 100%;
 }

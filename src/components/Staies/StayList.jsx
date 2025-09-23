@@ -3,9 +3,12 @@ import './StayList.css';
 import { useEffect } from 'react';
 import { stayIndex } from '../../store/thunks/stayThunk.js';
 import { setScrollEventFlg } from '../../store/slices/staySlice.js';
+import { useNavigate } from 'react-router-dom';
 
 function StayList () {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const stayList = useSelector(state => state.stay.list);
   const stayScrollEventFlg = useSelector(state => state.stay.scrollEventFlg);
 
@@ -13,7 +16,7 @@ function StayList () {
 
   useEffect(() => { 
     window.addEventListener('scroll', addNextPage);
-    if (stayList.legth === 0) {
+    if (stayList.length === 0) {
       dispatch(stayIndex());
     }
 
@@ -33,18 +36,24 @@ function StayList () {
       dispatch(stayIndex());
     }
   }
- 
 
-  useEffect
-  
+  function redirectShow(item) {
+    navigate(`/staies/${item.contentid}`);
+  }
+
+  function redirectBack() {
+    navigate(-1);
+  }
+
   return (
     <>
+      <button type="button" className="stay-back-btn" onClick={redirectBack}>되돌아가기</button>
       <div className="stay-container">
         {
           // festivalList && festivalList.map(item => {
            stayList.length > 0 && stayList.map((item) => {
             return ( 
-              <div className="stay-card" >
+              <div className="stay-card" onClick={() => { redirectShow(item) }} key={item.contentid + item.createdtime}>
                 <div className="stay-card-img" style={{backgroundImage: `url('${item.firstimage}')`}}></div>
                 <p className='stay-card-title'>{item.title}</p>
                 <p className="stay-card-addr">{`${item.addr1}`}</p>

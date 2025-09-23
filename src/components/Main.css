@@ -1,19 +1,35 @@
+/* 두 개의 .main-item 블록을 옆으로 나란히 배치합니다. */
 .main-container {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap; /* 공간이 부족하면 다음 줄로 넘김 */
+  align-items: flex-start; /* 상단 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  padding: 20px;
+  gap: 20px; /* 아이템 사이의 간격 */
 }
 
-.festival-title-img {
-  margin: 0 auto; 
-  width: 300px;
-  max-width: 500px;
-  padding-bottom: 30px;
+/* 각 블록(.main-item)에 대한 스타일입니다. */
+.main-item {
+  display: flex;
+  flex-direction: column; /* 이미지와 h2를 위아래로 배치 */
+  align-items: center;   /* 블록 내부에서 수평 중앙 정렬 */
+  cursor: pointer;
+  text-align: center;
+  flex-grow: 1; /* 남는 공간이 있을 때 늘어남 */
+  flex-basis: 300px; /* 최소 너비와 비슷한 기본 너비 설정 */
 }
 
-.stay-title-img {
-  margin: 0 auto;
-  width: 300px;
-  max-width: 500px;
+/* 이미지 스타일 */
+.festival-title-img, .stay-title-img {
+  width: 100%; /* 부모(.main-item) 너비에 맞춤 */
+  max-width: 400px; /* 이미지가 너무 커지는 것을 방지 */
+  height: auto; /* 이미지 비율 유지 */
+}
+
+/* h2 제목 스타일 */
+h2 {
+  padding: 20px 0 0 0; /* 이미지와의 상단 간격 */
+  font-size: 28px;
+  color: #fff;
 }
