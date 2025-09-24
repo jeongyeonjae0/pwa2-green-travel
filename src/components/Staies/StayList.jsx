@@ -51,9 +51,9 @@ function StayList () {
       <div className="stay-container">
         {
           // festivalList && festivalList.map(item => {
-           stayList.length > 0 && stayList.map((item) => {
+           stayList.length > 0 && stayList.map((item, index) => {
             return ( 
-              <div className="stay-card" onClick={() => { redirectShow(item) }} key={item.contentid + item.createdtime}>
+              <div className="stay-card" onClick={() => { redirectShow(item) }} key={item.contentid + item.createdtime + index}>
                 <div className="stay-card-img" style={{backgroundImage: `url('${item.firstimage}')`}}></div>
                 <p className='stay-card-title'>{item.title}</p>
                 <p className="stay-card-addr">{`${item.addr1}`}</p>

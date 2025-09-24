@@ -67,9 +67,9 @@ function FestivalList() {
       <div className="container">
         {
           // festivalList && festivalList.map(item => {
-          festivalList.length > 0 && festivalList.map(item => {
+          festivalList.length > 0 && festivalList.map((item, index) => {
             return (
-              <div className="card" onClick={() => { redirectShow(item) }} key={item.contentid + item.createdtime}>
+              <div className="card" onClick={() => { redirectShow(item) }} key={item.contentid + item.createdtime + index}>
                 <div className="card-img" style={{backgroundImage: `url('${item.firstimage}')`}}></div>
                 <p className='card-title'>{item.title}</p>
                 <p className="card-period">{dateFomatter.withHyphenYMD(item.eventstartdate)} ~ {dateFomatter.withHyphenYMD(item.eventenddate)}</p>
