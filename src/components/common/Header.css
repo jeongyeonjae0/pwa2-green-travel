@@ -1,7 +1,9 @@
 h1 {
   padding: 80px 0;
-  color: #fff;
-  font-size: 60px;
+  color: var(--personal-color-2);
+  /* calc() : 계산하는 함수 */
+  /* width와 font크기 조절할 때 가끔 쓰임 */
+  font-size: calc(4rem - 5px);
   text-align: center;
   cursor: pointer;
 }
